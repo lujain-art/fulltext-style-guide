@@ -1,0 +1,1122 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  .wrap {
+    padding: 1rem 0;
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+    min-width: 1100px;
+  }
+
+  thead tr {
+    background: var(--color-background-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  th {
+    padding: 10px 7px;
+    text-align: right;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    border-bottom: 1.5px solid var(--color-border-tertiary);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 8px 7px;
+    vertical-align: middle;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    text-align: right;
+    color: var(--color-text-primary);
+  }
+
+  tr:hover td {
+    background: var(--color-background-secondary);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid #555;
+    padding: 8px;
+  }
+
+
+  .screen-header td {
+    background: #1a1a2e;
+    color: #a0c4ff;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .screen-header td span {
+    display: inline-block;
+    background: #2a3a6e;
+    color: #7eb8ff;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+  }
+
+  .num {
+    color: var(--color-text-secondary);
+    font-size: 10px;
+    text-align: center;
+    min-width: 28px;
+  }
+
+  .use-tag {
+    display: inline-block;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .sample-cell {
+    min-width: 220px;
+  }
+
+  .sample {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .bg-swatch {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .swatch {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    display: inline-block;
+    border: 0.5px solid #0002;
+  }
+
+  .tag-basic {
+    background: #e8f0fb;
+    color: #185FA5;
+  }
+
+  .tag-button {
+    background: #e1f5ee;
+    color: #0F6E56;
+  }
+
+  .tag-title {
+    background: #faeeda;
+    color: #854F0B;
+  }
+
+  .tag-hud {
+    background: #f1efe8;
+    color: #5F5E5A;
+  }
+
+  .tag-dialog {
+    background: #fbeaf0;
+    color: #993556;
+  }
+
+  .tag-win {
+    background: #eaf3de;
+    color: #3B6D11;
+  }
+
+  .tag-lose {
+    background: #fcebeb;
+    color: #A32D2D;
+  }
+</style>
+<div class="wrap" dir="rtl">
+  <table>
+    <thead>
+      <tr>
+        <th>المعرف</th>
+        <th>الشاشة</th>
+        <th>النص الكامل</th>
+        <th>الاستخدام</th>
+        <th>اللون</th>
+        <th>نمط الخط</th>
+        <th>حجم الخط</th>
+        <th>لون خلفية النص</th>
+        <th>لون الخلفية العام</th>
+        <th>عرض تجريبي</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- ═══ MAIN MENU ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>🎮 Main Menu — القائمة الرئيسية</span></td>
+      </tr>
+      <tr>
+        <td class="num">1</td>
+        <td>Main Menu</td>
+        <td><strong>Wake Up, Lulu!</strong></td>
+        <td><span class="use-tag tag-title">عنوان اللعبة الرئيسي</span></td>
+        <td>أزرق داكن</td>
+        <td>Hand-drawn / Rough serif</td>
+        <td>~52px</td>
+        <td>لا يوجد</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#1a1a3e;"></span><span class="swatch"
+              style="background:#2a2a5e;"></span> غابة ليلية داكنة</span></td>
+        <td><span class="sample"
+            style="color:#1e3a6e;font-size:18px;font-family:Georgia,serif;font-weight:700;letter-spacing:1px;">Wake Up,
+            Lulu!</span></td>
+      </tr>
+      <tr>
+        <td class="num">2</td>
+        <td>Main Menu</td>
+        <td><strong>Start Game</strong></td>
+        <td><span class="use-tag tag-button">زر رئيسي (محدد / مضيء)</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif نظيف</td>
+        <td>~22px</td>
+        <td>أزرق داكن مع حد أزرق لامع</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#1a1a3e;"></span> غابة ليلية</span></td>
+        <td><span class="sample"
+            style="background:#1e2d5e;color:#fff;border:2px solid #4fc3f7;font-size:14px;border-radius:6px;"> Start
+            Game</span></td>
+      </tr>
+      <tr>
+        <td class="num">3</td>
+        <td>Main Menu</td>
+        <td><strong>How to Play</strong></td>
+        <td><span class="use-tag tag-button">زر ثانوي</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif نظيف</td>
+        <td>~22px</td>
+        <td>أزرق داكن بدون حد لامع</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#1a1a3e;"></span> غابة ليلية</span></td>
+        <td><span class="sample" style="background:#1e2d5e;color:#fff;font-size:14px;border-radius:6px;">How to
+            Play</span></td>
+      </tr>
+      <tr>
+        <td class="num">4</td>
+        <td>Main Menu</td>
+        <td><strong>Exit</strong></td>
+        <td><span class="use-tag tag-button">زر ثالثي</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif نظيف</td>
+        <td>~22px</td>
+        <td>أزرق/بنفسجي داكن أكثر</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#1a1a3e;"></span> غابة ليلية</span></td>
+        <td><span class="sample" style="background:#2a1a5e;color:#fff;font-size:14px;border-radius:6px;">Exit</span>
+        </td>
+      </tr>
+
+      <!-- ═══ HOW TO PLAY ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>📖 How to Play — شاشة كيف تلعب</span></td>
+      </tr>
+      <tr>
+        <td class="num">5</td>
+        <td>How to Play</td>
+        <td><strong>HOW TO PLAY</strong></td>
+        <td><span class="use-tag tag-title">عنوان الشاشة</span></td>
+        <td>أصفر ذهبي</td>
+        <td>Pixel / Bold serif</td>
+        <td>~36px</td>
+        <td>لافتة حجرية رمادية داكنة</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#2a2a4e;"></span> خلفية غابة داكنة</span>
+        </td>
+        <td><span class="sample"
+            style="background:#444;color:#f5c842;font-size:15px;font-family:'Courier New',monospace;font-weight:700;letter-spacing:2px;">HOW
+            TO PLAY</span></td>
+      </tr>
+      <tr>
+        <td class="num">6</td>
+        <td>How to Play</td>
+        <td><strong>The Nightmare Story</strong></td>
+        <td><span class="use-tag tag-basic">عنوان قسم فرعي</span></td>
+        <td>أسود</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>ورق/بيج داكن (لوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#1a1a1a;font-size:13px;font-weight:700;">The Nightmare
+            Story</span></td>
+      </tr>
+      <tr>
+        <td class="num">7</td>
+        <td>How to Play</td>
+        <td>Lulu is trapped. Nightmare consumes her. Wake her up!</td>
+        <td><span class="use-tag tag-basic">نص شرح القصة</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>ورق/بيج (لوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#1a1a1a;font-size:11px;">Lulu is trapped. Nightmare
+            consumes her. Wake her up!</span></td>
+      </tr>
+      <tr>
+        <td class="num">8</td>
+        <td>How to Play</td>
+        <td><strong>Movement &amp; Action</strong></td>
+        <td><span class="use-tag tag-basic">عنوان قسم فرعي</span></td>
+        <td>أسود</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>ورق/بيج (لوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#1a1a1a;font-size:13px;font-weight:700;">Movement &amp;
+            Action</span></td>
+      </tr>
+      <tr>
+        <td class="num">9</td>
+        <td>How to Play</td>
+        <td>Move &nbsp;|&nbsp; Jump &nbsp;|&nbsp; Attack</td>
+        <td><span class="use-tag tag-basic">تسميات أزرار التحكم</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>ورق/بيج (لوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#1a1a1a;font-size:11px;">Move &nbsp;|&nbsp; Jump
+            &nbsp;|&nbsp; Attack</span></td>
+      </tr>
+      <tr>
+        <td class="num">10</td>
+        <td>How to Play</td>
+        <td>← ↑ ↓ → &nbsp;|&nbsp; SPACE &nbsp;|&nbsp; Z/1</td>
+        <td><span class="use-tag tag-hud">مفاتيح لوحة المفاتيح</span></td>
+        <td>أسود</td>
+        <td>Sans Serif Bold (مربعات)</td>
+        <td>~13px</td>
+        <td>رمادي فاتح (مربعات مفاتيح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample"
+            style="background:#ccc;color:#111;font-size:11px;border:1px solid #999;border-radius:3px;">SPACE</span></td>
+      </tr>
+      <tr>
+        <td class="num">11</td>
+        <td>How to Play</td>
+        <td><strong>GATHER ALL 10 FRAGMENTS</strong></td>
+        <td><span class="use-tag tag-title">هدف اللعبة</span></td>
+        <td>أسود</td>
+        <td>Sans Serif Bold</td>
+        <td>~16px</td>
+        <td>ورق/بيج (لوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#111;font-size:12px;font-weight:700;">GATHER ALL 10
+            FRAGMENTS</span></td>
+      </tr>
+      <tr>
+        <td class="num">12</td>
+        <td>How to Play</td>
+        <td><strong>FAIL TIME</strong></td>
+        <td><span class="use-tag tag-lose">عنوان تحذير الوقت</span></td>
+        <td>أصفر/ذهبي</td>
+        <td>Bold / Heavy</td>
+        <td>~22px</td>
+        <td>شريط بني داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#5a3a1a;color:#f5c842;font-size:13px;font-weight:700;">FAIL
+            TIME</span></td>
+      </tr>
+      <tr>
+        <td class="num">13</td>
+        <td>How to Play</td>
+        <td>Time is short! Dawn approaches.</td>
+        <td><span class="use-tag tag-basic">شرح الوقت</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>ورق/بيج (لوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#111;font-size:11px;">Time is short! Dawn
+            approaches.</span></td>
+      </tr>
+      <tr>
+        <td class="num">14</td>
+        <td>How to Play</td>
+        <td><strong>THE ENEMY: DREAM GHOST</strong></td>
+        <td><span class="use-tag tag-lose">اسم العدو</span></td>
+        <td>أحمر/بني داكن</td>
+        <td>Sans Serif Bold</td>
+        <td>~15px</td>
+        <td>لوح داكن (يمين)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a1a1a;"></span> لوح شوك داكن</span></td>
+        <td><span class="sample" style="background:#3a1a1a;color:#c0392b;font-size:11px;font-weight:700;">THE ENEMY:
+            DREAM GHOST</span></td>
+      </tr>
+      <tr>
+        <td class="num">15</td>
+        <td>How to Play</td>
+        <td>They steal your light and souls! Avoid at all costs!</td>
+        <td><span class="use-tag tag-basic">وصف العدو</span></td>
+        <td>أبيض/رمادي فاتح</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>لوح داكن (يمين)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a1a1a;"></span> لوح شوك داكن</span></td>
+        <td><span class="sample" style="background:#3a1a1a;color:#ddd;font-size:10px;">They steal your light and souls!
+            Avoid at all costs!</span></td>
+      </tr>
+      <tr>
+        <td class="num">16</td>
+        <td>How to Play</td>
+        <td>Your Hearts ❤❤❤</td>
+        <td><span class="use-tag tag-hud">مؤشر الأرواح</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>لوح داكن (يمين)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a1a1a;"></span> لوح شوك داكن</span></td>
+        <td><span class="sample" style="background:#3a1a1a;color:#e74c3c;font-size:12px;">❤ ❤ ❤ Your Hearts</span></td>
+      </tr>
+      <tr>
+        <td class="num">17</td>
+        <td>How to Play</td>
+        <td><strong>BACK</strong></td>
+        <td><span class="use-tag tag-button">زر العودة</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>أزرق/بنفسجي داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#2a2a4e;"></span> غابة داكنة</span></td>
+        <td><span class="sample"
+            style="background:#2a1a5e;color:#fff;font-size:13px;font-weight:700;border:2px solid #4a3a9e;border-radius:6px;">BACK</span>
+        </td>
+      </tr>
+
+      <!-- ═══ INTRO DIALOGUE ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>💬 Intro Dialogue — شاشة الحوار التمهيدي</span></td>
+      </tr>
+      <tr>
+        <td class="num">18</td>
+        <td>Intro / Dialogue</td>
+        <td>I'm Lulu… I was just a normal college student, until I found myself trapped inside a dark nightmare.</td>
+        <td><span class="use-tag tag-dialog">حوار لولو — الجملة 1</span></td>
+        <td>أحمر داكن</td>
+        <td>Sans Serif</td>
+        <td>~14px</td>
+        <td>أبيض (فقاعة حوار)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> غابة داكنة ضبابية</span>
+        </td>
+        <td><span class="sample"
+            style="background:#fff;color:#8b0000;font-size:10px;border:1px solid #ccc;border-radius:6px;max-width:200px;white-space:normal;display:block;padding:5px;">I'm
+            Lulu… I was just a normal college student, until I found myself trapped inside a dark nightmare.</span></td>
+      </tr>
+      <tr>
+        <td class="num">19</td>
+        <td>Intro / Dialogue</td>
+        <td>Everything here is strange. Enemies chase me, and time runs against me. I can feel the darkness closing in
+          with every second that passes.</td>
+        <td><span class="use-tag tag-dialog">حوار لولو — الجملة 2</span></td>
+        <td>أحمر داكن</td>
+        <td>Sans Serif</td>
+        <td>~14px</td>
+        <td>أبيض (فقاعة حوار)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> غابة داكنة ضبابية</span>
+        </td>
+        <td><span class="sample"
+            style="background:#fff;color:#8b0000;font-size:10px;border:1px solid #ccc;border-radius:6px;max-width:200px;white-space:normal;display:block;padding:5px;">Everything
+            here is strange. Enemies chase me, and time runs against me…</span></td>
+      </tr>
+      <tr>
+        <td class="num">20</td>
+        <td>Intro / Dialogue</td>
+        <td>But there is hope… fragments of light are scattered across this world. If I collect them all, I can break
+          free and wake up from this nightmare.</td>
+        <td><span class="use-tag tag-dialog">حوار لولو — الجملة 3</span></td>
+        <td>أحمر داكن</td>
+        <td>Sans Serif</td>
+        <td>~14px</td>
+        <td>أبيض (فقاعة حوار)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> غابة داكنة ضبابية</span>
+        </td>
+        <td><span class="sample"
+            style="background:#fff;color:#8b0000;font-size:10px;border:1px solid #ccc;border-radius:6px;max-width:200px;white-space:normal;display:block;padding:5px;">But
+            there is hope… fragments of light are scattered across this world…</span></td>
+      </tr>
+      <tr>
+        <td class="num">21</td>
+        <td>Intro / Dialogue</td>
+        <td>I run, I jump, I fight… but I can't do this alone. I need you to help me.</td>
+        <td><span class="use-tag tag-dialog">حوار لولو — الجملة 4</span></td>
+        <td>أحمر داكن</td>
+        <td>Sans Serif</td>
+        <td>~14px</td>
+        <td>أبيض (فقاعة حوار)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> غابة داكنة ضبابية</span>
+        </td>
+        <td><span class="sample"
+            style="background:#fff;color:#8b0000;font-size:10px;border:1px solid #ccc;border-radius:6px;max-width:200px;white-space:normal;display:block;padding:5px;">I
+            run, I jump, I fight… but I can't do this alone…</span></td>
+      </tr>
+      <tr>
+        <td class="num">22</td>
+        <td>Intro / Dialogue</td>
+        <td>Help me gather the light before time runs out… Help me wake up.</td>
+        <td><span class="use-tag tag-dialog">حوار لولو — الجملة 5 (الأخيرة)</span></td>
+        <td>أحمر داكن</td>
+        <td>Sans Serif</td>
+        <td>~14px</td>
+        <td>أبيض (فقاعة حوار)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> غابة داكنة ضبابية</span>
+        </td>
+        <td><span class="sample"
+            style="background:#fff;color:#8b0000;font-size:10px;border:1px solid #ccc;border-radius:6px;max-width:200px;white-space:normal;display:block;padding:5px;">Help
+            me gather the light before time runs out… Help me wake up.</span></td>
+      </tr>
+      <tr>
+        <td class="num">23</td>
+        <td>Intro / Dialogue</td>
+        <td><strong>Next</strong></td>
+        <td><span class="use-tag tag-button">زر التالي</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif Bold</td>
+        <td>~16px</td>
+        <td>أسود (#111)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> غابة داكنة ضبابية</span>
+        </td>
+        <td><span class="sample"
+            style="background:#111;color:#fff;font-size:12px;font-weight:700;border-radius:4px;">Next</span></td>
+      </tr>
+      <tr>
+        <td class="num">24</td>
+        <td>Intro / Dialogue</td>
+        <td>0 / 10</td>
+        <td><span class="use-tag tag-hud">عداد الشظايا (HUD)</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف (HUD)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#111;"></span> شريط HUD أسود</span></td>
+        <td><span class="sample" style="background:#111;color:#fff;font-size:12px;">⬤ 0 / 10</span></td>
+      </tr>
+      <tr>
+        <td class="num">25</td>
+        <td>Intro / Dialogue</td>
+        <td>3</td>
+        <td><span class="use-tag tag-hud">عداد الأرواح (HUD)</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف (HUD)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#111;"></span> شريط HUD أسود</span></td>
+        <td><span class="sample" style="background:#111;color:#fff;font-size:12px;">❤ 3</span></td>
+      </tr>
+      <tr>
+        <td class="num">26</td>
+        <td>Intro / Dialogue</td>
+        <td>70s</td>
+        <td><span class="use-tag tag-hud">عداد الوقت (HUD)</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف (HUD)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#111;"></span> شريط HUD أسود</span></td>
+        <td><span class="sample" style="background:#111;color:#fff;font-size:12px;">⧗ 70s</span></td>
+      </tr>
+
+      <!-- ═══ LEVEL 1 GAMEPLAY ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>🌿 Level 1 Gameplay — اللعب المستوى الأول</span></td>
+      </tr>
+      <tr>
+        <td class="num">27</td>
+        <td>Level 1 — Gameplay</td>
+        <td>0 / 15</td>
+        <td><span class="use-tag tag-hud">عداد شظايا الأحلام (HUD)</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية زرقاء</span>
+        </td>
+        <td><span class="sample" style="color:#111;font-size:12px;background:#87ceeb55;">⬤ 0 / 15</span></td>
+      </tr>
+      <tr>
+        <td class="num">28</td>
+        <td>Level 1 — Gameplay</td>
+        <td>3</td>
+        <td><span class="use-tag tag-hud">عداد الأرواح (HUD)</span></td>
+        <td>أبيض/أسود</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية زرقاء</span>
+        </td>
+        <td><span class="sample" style="color:#111;font-size:12px;background:#87ceeb55;">❤ 3</span></td>
+      </tr>
+      <tr>
+        <td class="num">29</td>
+        <td>Level 1 — Gameplay</td>
+        <td>87s</td>
+        <td><span class="use-tag tag-hud">عداد الوقت (HUD)</span></td>
+        <td>أبيض/أسود</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية زرقاء</span>
+        </td>
+        <td><span class="sample" style="color:#111;font-size:12px;background:#87ceeb55;">⧗ 87s</span></td>
+      </tr>
+
+      <!-- ═══ LEVEL 1 WIN ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>🏆 Level 1 Win — شاشة الفوز بالمستوى الأول</span></td>
+      </tr>
+      <tr>
+        <td class="num">30</td>
+        <td>Level 1 Win</td>
+        <td><strong>LEVEL 1 WIN!</strong></td>
+        <td><span class="use-tag tag-win">عنوان الفوز</span></td>
+        <td>أصفر ذهبي</td>
+        <td>Pixel / Rough</td>
+        <td>~30px</td>
+        <td>لافتة حجرية داكنة</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح خشبي/بيج</span></td>
+        <td><span class="sample"
+            style="background:#444;color:#f5c842;font-size:13px;font-family:'Courier New',monospace;font-weight:700;">LEVEL
+            1 WIN!</span></td>
+      </tr>
+      <tr>
+        <td class="num">31</td>
+        <td>Level 1 Win</td>
+        <td><strong>STUNNING ESCAPE!</strong></td>
+        <td><span class="use-tag tag-win">تقييم الأداء</span></td>
+        <td>أسود</td>
+        <td>Sans Serif Bold</td>
+        <td>~22px</td>
+        <td>بيج/ورق (اللوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#111;font-size:13px;font-weight:700;">STUNNING
+            ESCAPE!</span></td>
+      </tr>
+      <tr>
+        <td class="num">32</td>
+        <td>Level 1 Win</td>
+        <td>All 10 Light Fragments Collected Before Time Ran Out!</td>
+        <td><span class="use-tag tag-basic">وصف الفوز</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~15px</td>
+        <td>بيج/ورق (اللوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#111;font-size:10px;">All 10 Light Fragments Collected
+            Before Time Ran Out!</span></td>
+      </tr>
+      <tr>
+        <td class="num">33</td>
+        <td>Level 1 Win</td>
+        <td>You defiance made dawn possible.</td>
+        <td><span class="use-tag tag-basic">رسالة تحفيزية</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~15px</td>
+        <td>بيج/ورق (اللوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#111;font-size:10px;">You defiance made dawn
+            possible.</span></td>
+      </tr>
+      <tr>
+        <td class="num">34</td>
+        <td>Level 1 Win</td>
+        <td>10/10 Fragments Collected</td>
+        <td><span class="use-tag tag-hud">إحصاء الشظايا</span></td>
+        <td>أسود</td>
+        <td>Sans Serif Bold</td>
+        <td>~16px</td>
+        <td>بيج/ورق (اللوح)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="background:#d4b896;color:#111;font-size:11px;font-weight:700;">🔶 10/10
+            Fragments Collected</span></td>
+      </tr>
+      <tr>
+        <td class="num">35</td>
+        <td>Level 1 Win</td>
+        <td>Prepares for Level 2…</td>
+        <td><span class="use-tag tag-basic">نص توقع المستوى التالي</span></td>
+        <td>رمادي</td>
+        <td>Sans Serif Italic</td>
+        <td>~13px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#c8a97a;"></span> لوح بيج</span></td>
+        <td><span class="sample" style="color:#888;font-size:10px;font-style:italic;">Prepares for Level 2…</span></td>
+      </tr>
+      <tr>
+        <td class="num">36</td>
+        <td>Level 1 Win</td>
+        <td><strong>NEXT LEVEL</strong></td>
+        <td><span class="use-tag tag-button">زر المستوى التالي</span></td>
+        <td>أبيض/ذهبي</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>أزرق/بنفسجي داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#2a2a4e;"></span> غابة داكنة</span></td>
+        <td><span class="sample"
+            style="background:#2a1a5e;color:#f5c842;font-size:12px;font-weight:700;border:2px solid #4a3a9e;border-radius:6px;">NEXT
+            LEVEL</span></td>
+      </tr>
+
+      <!-- ═══ YOU LOSE ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>💀 You Lose — شاشة الخسارة (نفاذ المحاولات — Level 1)</span></td>
+      </tr>
+      <tr>
+        <td class="num">37</td>
+        <td>You Lose</td>
+        <td><strong>You Lose</strong></td>
+        <td><span class="use-tag tag-lose">عنوان الخسارة</span></td>
+        <td>بنفسجي/أبيض</td>
+        <td>Rough serif / Pixel</td>
+        <td>~36px</td>
+        <td>لافتة حجرية داكنة</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#1a1a2e;"></span><span class="swatch"
+              style="background:#2a0a3e;"></span> خلفية داكنة بنفسجية</span></td>
+        <td><span class="sample"
+            style="background:#2a1a3e;color:#b39ddb;font-size:14px;font-family:'Courier New',monospace;font-weight:700;">You
+            Lose</span></td>
+      </tr>
+      <tr>
+        <td class="num">38</td>
+        <td>You Lose</td>
+        <td><strong>TRAPPED IN THE NIGHT!</strong></td>
+        <td><span class="use-tag tag-lose">عنوان سبب الخسارة</span></td>
+        <td>أصفر</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>بنفسجي داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a1a5e;"></span> لوح بنفسجي</span></td>
+        <td><span class="sample" style="background:#3a1a5e;color:#f5c842;font-size:11px;font-weight:700;">TRAPPED IN THE
+            NIGHT!</span></td>
+      </tr>
+      <tr>
+        <td class="num">39</td>
+        <td>You Lose</td>
+        <td>Lulu fell to the nightmare…</td>
+        <td><span class="use-tag tag-lose">نص وصف الخسارة</span></td>
+        <td>رمادي فاتح</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>لوح حجري داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a1a5e;"></span> لوح بنفسجي</span></td>
+        <td><span class="sample" style="background:#2a1a3e;color:#bbb;font-size:10px;">Lulu fell to the
+            nightmare…</span></td>
+      </tr>
+      <tr>
+        <td class="num">40</td>
+        <td>You Lose</td>
+        <td>LIGHT FADED</td>
+        <td><span class="use-tag tag-lose">سبب خسارة 1</span></td>
+        <td>بني/ذهبي</td>
+        <td>Sans Serif Bold</td>
+        <td>~15px</td>
+        <td>لوح حجري رمادي</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> لوح رمادي</span></td>
+        <td><span class="sample" style="background:#3a3a4a;color:#c8a050;font-size:11px;font-weight:700;">🔶 LIGHT
+            FADED</span></td>
+      </tr>
+      <tr>
+        <td class="num">41</td>
+        <td>You Lose</td>
+        <td>ESSENCE STOLEN</td>
+        <td><span class="use-tag tag-lose">سبب خسارة 2</span></td>
+        <td>أحمر</td>
+        <td>Sans Serif Bold</td>
+        <td>~15px</td>
+        <td>لوح حجري رمادي</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> لوح رمادي</span></td>
+        <td><span class="sample" style="background:#3a3a4a;color:#e74c3c;font-size:11px;font-weight:700;">☠ ESSENCE
+            STOLEN</span></td>
+      </tr>
+      <tr>
+        <td class="num">42</td>
+        <td>You Lose</td>
+        <td>TIME LOST</td>
+        <td><span class="use-tag tag-lose">سبب خسارة 3</span></td>
+        <td>بني/رمادي</td>
+        <td>Sans Serif Bold</td>
+        <td>~15px</td>
+        <td>لوح حجري رمادي</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> لوح رمادي</span></td>
+        <td><span class="sample" style="background:#3a3a4a;color:#95a5a6;font-size:11px;font-weight:700;">⧗ TIME
+            LOST</span></td>
+      </tr>
+      <tr>
+        <td class="num">43</td>
+        <td>You Lose</td>
+        <td><strong>THE NIGHTMARE PREVAILS</strong></td>
+        <td><span class="use-tag tag-lose">وصف العدو المنتصر</span></td>
+        <td>بني داكن</td>
+        <td>Sans Serif Bold</td>
+        <td>~16px</td>
+        <td>لوح حجري رمادي (يمين)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#3a3a5a;"></span> لوح رمادي</span></td>
+        <td><span class="sample" style="background:#3a3a4a;color:#c8a050;font-size:11px;font-weight:700;">THE NIGHTMARE
+            PREVAILS</span></td>
+      </tr>
+      <tr>
+        <td class="num">44</td>
+        <td>You Lose</td>
+        <td><strong>TRY AGAIN</strong></td>
+        <td><span class="use-tag tag-button">زر إعادة المحاولة</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>أحمر داكن مع حد أحمر لامع</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#1a1a2e;"></span> داكن</span></td>
+        <td><span class="sample"
+            style="background:#7b0000;color:#fff;font-size:12px;font-weight:700;border:2px solid #e74c3c;border-radius:6px;">TRY
+            AGAIN</span></td>
+      </tr>
+      <tr>
+        <td class="num">45</td>
+        <td>You Lose</td>
+        <td><strong>MAIN MENU</strong></td>
+        <td><span class="use-tag tag-button">زر القائمة الرئيسية</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>أزرق/بنفسجي داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#1a1a2e;"></span> داكن</span></td>
+        <td><span class="sample"
+            style="background:#2a1a5e;color:#fff;font-size:12px;font-weight:700;border:1px solid #4a3a9e;border-radius:6px;">MAIN
+            MENU</span></td>
+      </tr>
+
+      <!-- ═══ GAME OVER ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>💀 Game Over — شاشة انتهاء اللعبة (Level 2 - انتهاء الوقت/المحاولات)</span></td>
+      </tr>
+      <tr>
+        <td class="num">46</td>
+        <td>Game Over</td>
+        <td><strong>GAME OVER</strong></td>
+        <td><span class="use-tag tag-lose">عنوان انتهاء اللعبة</span></td>
+        <td>أحمر</td>
+        <td>Pixel / Cracked stone</td>
+        <td>~72px</td>
+        <td>لا يوجد (شفاف)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#0a0a0a;"></span><span class="swatch"
+              style="background:#1a0a1e;"></span> أسود مع ضباب أحمر</span></td>
+        <td><span class="sample"
+            style="background:#0a0a0a;color:#c0392b;font-size:18px;font-family:'Courier New',monospace;font-weight:700;letter-spacing:3px;">GAME
+            OVER</span></td>
+      </tr>
+      <tr>
+        <td class="num">47</td>
+        <td>Game Over</td>
+        <td><strong>Try Again</strong></td>
+        <td><span class="use-tag tag-button">زر إعادة المحاولة</span></td>
+        <td>أبيض/أصفر</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>ذهبي/بني داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#0a0a0a;"></span> أسود</span></td>
+        <td><span class="sample"
+            style="background:#5a3a1a;color:#f5c842;font-size:12px;font-weight:700;border-radius:6px;">↺ Try
+            Again</span></td>
+      </tr>
+      <tr>
+        <td class="num">48</td>
+        <td>Game Over</td>
+        <td><strong>Main Menu</strong></td>
+        <td><span class="use-tag tag-button">زر القائمة الرئيسية</span></td>
+        <td>أبيض/أصفر</td>
+        <td>Sans Serif Bold</td>
+        <td>~18px</td>
+        <td>ذهبي/بني داكن</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#0a0a0a;"></span> أسود</span></td>
+        <td><span class="sample"
+            style="background:#5a3a1a;color:#f5c842;font-size:12px;font-weight:700;border-radius:6px;">🏠 Main
+            Menu</span></td>
+      </tr>
+
+      <!-- ═══ LEVEL 2 INSTRUCTIONS ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>📋 Level 2 Instructions — تعليمات المستوى الثاني</span></td>
+      </tr>
+      <tr>
+        <td class="num">49</td>
+        <td>Level 2 Instructions</td>
+        <td><strong>Level 2 – Gameplay Instructions</strong></td>
+        <td><span class="use-tag tag-title">عنوان الشاشة</span></td>
+        <td>أبيض/ذهبي</td>
+        <td>Sans Serif Bold</td>
+        <td>~28px</td>
+        <td>لافتة خشبية بنية</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample"
+            style="background:#7a5a2a;color:#fff5d0;font-size:12px;font-weight:700;border-radius:4px;">Level 2 –
+            Gameplay Instructions</span></td>
+      </tr>
+      <tr>
+        <td class="num">50</td>
+        <td>Level 2 Instructions</td>
+        <td><strong>MOVEMENT</strong></td>
+        <td><span class="use-tag tag-title">عنوان قسم الحركة</span></td>
+        <td>بني/ذهبي</td>
+        <td>Sans Serif Bold</td>
+        <td>~20px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#7a5a2a;font-size:13px;font-weight:700;">MOVEMENT</span></td>
+      </tr>
+      <tr>
+        <td class="num">51</td>
+        <td>Level 2 Instructions</td>
+        <td><strong>JUMPING</strong></td>
+        <td><span class="use-tag tag-title">عنوان قسم القفز</span></td>
+        <td>بني/ذهبي</td>
+        <td>Sans Serif Bold</td>
+        <td>~20px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#7a5a2a;font-size:13px;font-weight:700;">JUMPING</span></td>
+      </tr>
+      <tr>
+        <td class="num">52</td>
+        <td>Level 2 Instructions</td>
+        <td><strong>COMBAT</strong></td>
+        <td><span class="use-tag tag-title">عنوان قسم القتال</span></td>
+        <td>بني/ذهبي</td>
+        <td>Sans Serif Bold</td>
+        <td>~20px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#7a5a2a;font-size:13px;font-weight:700;">COMBAT</span></td>
+      </tr>
+      <tr>
+        <td class="num">53</td>
+        <td>Level 2 Instructions</td>
+        <td>← → / A D</td>
+        <td><span class="use-tag tag-hud">مفاتيح الحركة</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif Bold</td>
+        <td>~16px</td>
+        <td>بني داكن (مربعات)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample"
+            style="background:#7a5a2a;color:#fff;font-size:11px;border-radius:4px;padding:2px 8px;">← →</span></td>
+      </tr>
+      <tr>
+        <td class="num">54</td>
+        <td>Level 2 Instructions</td>
+        <td>↑ W Space</td>
+        <td><span class="use-tag tag-hud">مفاتيح القفز</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif Bold</td>
+        <td>~16px</td>
+        <td>بني داكن (مربعات)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample"
+            style="background:#7a5a2a;color:#fff;font-size:11px;border-radius:4px;padding:2px 8px;">↑ W Space</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="num">55</td>
+        <td>Level 2 Instructions</td>
+        <td>Move Left and Right</td>
+        <td><span class="use-tag tag-basic">شرح الحركة</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#111;font-size:10px;background:#87ceeb55;">Move Left and Right</span></td>
+      </tr>
+      <tr>
+        <td class="num">56</td>
+        <td>Level 2 Instructions</td>
+        <td>Jump Over Obstacles</td>
+        <td><span class="use-tag tag-basic">شرح القفز</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#111;font-size:10px;background:#87ceeb55;">Jump Over Obstacles</span></td>
+      </tr>
+      <tr>
+        <td class="num">57</td>
+        <td>Level 2 Instructions</td>
+        <td>Collect Dream Shards to escape the nightmare.</td>
+        <td><span class="use-tag tag-basic">شرح الهدف</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#111;font-size:10px;background:#87ceeb55;">Collect Dream Shards to escape
+            the nightmare.</span></td>
+      </tr>
+      <tr>
+        <td class="num">58</td>
+        <td>Level 2 Instructions</td>
+        <td>Jump on slimes to defeat them!</td>
+        <td><span class="use-tag tag-basic">شرح القتال</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~13px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#111;font-size:10px;background:#87ceeb55;">Jump on slimes to defeat
+            them!</span></td>
+      </tr>
+      <tr>
+        <td class="num">59</td>
+        <td>Level 2 Instructions</td>
+        <td>Avoid enemies!</td>
+        <td><span class="use-tag tag-lose">تحذير الأعداء</span></td>
+        <td>أحمر</td>
+        <td>Sans Serif Bold</td>
+        <td>~13px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="color:#e74c3c;font-size:10px;font-weight:700;background:#87ceeb55;">✕ Avoid
+            enemies!</span></td>
+      </tr>
+      <tr>
+        <td class="num">60</td>
+        <td>Level 2 Instructions</td>
+        <td><strong>Start Game</strong></td>
+        <td><span class="use-tag tag-button">زر بدء اللعبة</span></td>
+        <td>أسود</td>
+        <td>Sans Serif Bold</td>
+        <td>~20px</td>
+        <td>بني/خشبي (زر لافتة)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample"
+            style="background:#a07040;color:#fff5d0;font-size:13px;font-weight:700;border-radius:20px;padding:4px 14px;">Start
+            Game</span></td>
+      </tr>
+      <tr>
+        <td class="num">61</td>
+        <td>Level 2 Instructions</td>
+        <td><strong>Back to Menu</strong></td>
+        <td><span class="use-tag tag-button">زر العودة</span></td>
+        <td>أسود</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>بني/خشبي فاتح</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample"
+            style="background:#c8a070;color:#3a1a00;font-size:12px;border-radius:8px;padding:3px 10px;">Back to
+            Menu</span></td>
+      </tr>
+
+      <!-- ═══ LEVEL 2 GAMEPLAY ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>⚔️ Level 2 Gameplay — اللعب المستوى الثاني</span></td>
+      </tr>
+      <tr>
+        <td class="num">62</td>
+        <td>Level 2 — Gameplay</td>
+        <td>0 / 10</td>
+        <td><span class="use-tag tag-hud">عداد شظايا الأحلام (HUD)</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="background:#87ceeb55;color:#111;font-size:12px;">⬤ 0 / 10</span></td>
+      </tr>
+      <tr>
+        <td class="num">63</td>
+        <td>Level 2 — Gameplay</td>
+        <td>3</td>
+        <td><span class="use-tag tag-hud">عداد الأرواح (HUD)</span></td>
+        <td>أبيض/أسود</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="background:#87ceeb55;color:#111;font-size:12px;">❤ 3</span></td>
+      </tr>
+      <tr>
+        <td class="num">64</td>
+        <td>Level 2 — Gameplay</td>
+        <td>87s</td>
+        <td><span class="use-tag tag-hud">عداد الوقت (HUD)</span></td>
+        <td>أبيض/أسود</td>
+        <td>Sans Serif</td>
+        <td>~16px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#87ceeb;"></span> خلفية نهارية</span></td>
+        <td><span class="sample" style="background:#87ceeb55;color:#111;font-size:12px;">⧗ 87s</span></td>
+      </tr>
+
+      <!-- ═══ YOU SUCCEEDED ═══ -->
+      <tr class="screen-header">
+        <td colspan="10"><span>🌸 You Succeeded! — شاشة الفوز النهائي</span></td>
+      </tr>
+      <tr>
+        <td class="num">65</td>
+        <td>You Succeeded!</td>
+        <td><strong>You Succeeded!</strong></td>
+        <td><span class="use-tag tag-win">عنوان الفوز النهائي</span></td>
+        <td>أصفر ذهبي</td>
+        <td>Rounded serif / Script</td>
+        <td>~52px</td>
+        <td>لا يوجد (شفاف)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#4a2a6e;"></span><span class="swatch"
+              style="background:#6a8a3e;"></span> غابة سحرية ورديفة</span></td>
+        <td><span class="sample"
+            style="color:#f5c842;font-size:16px;font-family:Georgia,serif;font-weight:700;text-shadow:none;">You
+            Succeeded!</span></td>
+      </tr>
+      <tr>
+        <td class="num">66</td>
+        <td>You Succeeded!</td>
+        <td>Lulu has awakened from the nightmare.</td>
+        <td><span class="use-tag tag-win">نص وصف الفوز</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif</td>
+        <td>~18px</td>
+        <td>شفاف</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#4a2a6e;"></span> غابة سحرية</span></td>
+        <td><span class="sample" style="color:#fff;font-size:11px;background:#4a2a6e99;border-radius:4px;">Lulu has
+            awakened from the nightmare.</span></td>
+      </tr>
+      <tr>
+        <td class="num">67</td>
+        <td>You Succeeded!</td>
+        <td><strong>Main Menu</strong></td>
+        <td><span class="use-tag tag-button">زر القائمة الرئيسية</span></td>
+        <td>أبيض</td>
+        <td>Sans Serif Bold</td>
+        <td>~22px</td>
+        <td>أزرق/فيروزي (زر كبير)</td>
+        <td><span class="bg-swatch"><span class="swatch" style="background:#4a2a6e;"></span> غابة سحرية</span></td>
+        <td><span class="sample"
+            style="background:#1a9a9a;color:#fff;font-size:13px;font-weight:700;border-radius:30px;padding:4px 18px;">Main
+            Menu</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
